@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import WorkItem from '../workItem'
 // slides
 import { activebox_preview, activebox_slides } from '../../img/works/activebox'
@@ -146,24 +147,39 @@ const works = [
 ]
 
 const Portfolio = () => {
+  const [filter, setFilter] = useState('all')
+
+  const filteredWorks = filter !== 'all'
+    ? works.filter(item => item.category.toLowerCase() === filter)
+    : works
+
   return (
     <div className="work" id="work">
       <div className="container">
         <div className="filter">
-          <a href="" data-filter className="filter__link active">
+          <button
+            onClick={() => setFilter('all')}
+            className={'filter__link' + (filter === 'all' ? ' active' : '')}
+          >
             All
-          </a>
-          <a href="" data-filter className="filter__link">
+          </button>
+          <button 
+            onClick={() => setFilter('lending')}
+            className={'filter__link' + (filter === 'lending' ? ' active' : '')}
+          >
             Lending
-          </a>
-          <a href="" data-filter className="filter__link">
+          </button>
+          <button 
+            onClick={() => setFilter('app')}
+            className={'filter__link' + (filter === 'app' ? ' active' : '')}
+          >
             App
-          </a>
+          </button>
         </div>
 
         <div className="portfolio">
-          {Object.keys(works).map((work) => (
-            <WorkItem key={works[work].id} workItem={works[work]} />
+          {Object.keys(filteredWorks).map((work) => (
+            <WorkItem key={filteredWorks[work].id} workItem={filteredWorks[work]} />
           ))}
         </div>
         {/* <button type="button" id="loadmoreworks" className="work__btn btn-black">LOAD MORE WORK</button> */}

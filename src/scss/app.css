@@ -470,6 +470,10 @@ a:hover {
   -webkit-transition: font-weight 0.1s linear;
   transition: font-weight 0.1s linear;
   position: relative;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
 }
 .filter__link:first-child {
   margin-left: 0;
