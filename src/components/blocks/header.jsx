@@ -13,6 +13,19 @@ const Header = () => {
     setBurger(prev => !prev)
   }
 
+  // SMOOTH SCROLL
+  const handleClick = ({ target }) => {
+    const coordY =
+      document.querySelector(target.dataset.scroll).getBoundingClientRect()
+        .top + window.scrollY
+    window.scrollTo({
+      top: coordY - 150,
+      behavior: 'smooth'
+    })
+    document.querySelector('.burger').classList.remove('active')
+    document.querySelector('.nav').classList.remove('active')
+  }
+
   return (
     <header className={'header' + (fixed ? ' fixed' : '')}>
       <div className="container">
@@ -26,20 +39,20 @@ const Header = () => {
           </div>
           <div className="header__nav">
             <nav className={'nav' + (burger ? ' active' : '')}>
-              <a
-                href="#work"
+              <button
+                onClick={handleClick}
                 className="nav__link navlinkJS"
-                data-scroll="work"
+                data-scroll="#work"
               >
-                WORK
-              </a>
-              <a
-                href="#about"
+                PORTFOLIO
+              </button>
+              <button
+                onClick={handleClick}
                 className="nav__link navlinkJS"
-                data-scroll="about"
+                data-scroll="#about"
               >
                 ABOUT ME
-              </a>
+              </button>
               <a
                 href="https://drive.google.com/drive/folders/1HKMRvPkR9TdaQ-3hU_OKvDMTbN0abX8l?usp=sharing"
                 target="_blank"

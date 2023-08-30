@@ -9,6 +9,7 @@ import { todoList_preview, todoList_slide } from '../../img/works/todoList'
 import { ticTacToe_preview, ticTacToe_slide } from '../../img/works/tic-tac-toe'
 import { weatherWidget_preview, weatherWidget_slide } from '../../img/works/weather-widget'
 import { contectsMenu_preview, contectsMenu_slide } from '../../img/works/contectsMenu'
+import { userCards_preview, userCards_slide } from '../../img/works/user-cards'
 import { usersTable_preview, usersTable_slides } from '../../img/works/usersTable'
 
 const works = [
@@ -17,8 +18,8 @@ const works = [
     name: 'ActiveBox',
     category: 'Lending',
     date: '2022-11-23',
-    website_link: './portfolio/lending/activebox/index.html',
-    file_link: 'https://github.com/ZagSerSan/ZagSerSan.github.io/tree/master/portfolio/lending/activebox',
+    website_link: 'https://zagsersan.github.io/portfolio_project-files/lending/activebox/index.html',
+    file_link: 'https://github.com/ZagSerSan/portfolio_project-files/blob/main/lending/activebox/',
     img_src: activebox_preview,
     modal_images: activebox_slides,
     description: {
@@ -32,8 +33,8 @@ const works = [
     name: 'MoGo',
     category: 'Lending',
     date: '2022-11-23',
-    website_link: './portfolio/lending/mogo/index.html',
-    file_link: 'https://github.com/ZagSerSan/ZagSerSan.github.io/tree/master/portfolio/lending/mogo/',
+    website_link: 'https://zagsersan.github.io/portfolio_project-files/lending/mogo/index.html',
+    file_link: 'https://github.com/ZagSerSan/portfolio_project-files/blob/main/lending/mogo/',
     img_src: mogo_preview,
     modal_images: mogo_slides,
     description: {
@@ -47,8 +48,8 @@ const works = [
     name: 'Designer Portfolio',
     category: 'Lending',
     date: '2022-11-23',
-    website_link: './portfolio/lending/designer-portfolio/index.html',
-    file_link: 'https://github.com/ZagSerSan/ZagSerSan.github.io/tree/master/portfolio/lending/designer-portfolio/',
+    website_link: 'https://zagsersan.github.io/portfolio_project-files/lending/designer-portfolio/index.html',
+    file_link: 'https://github.com/ZagSerSan/portfolio_project-files/blob/main/lending/designer-portfolio/',
     img_src: designerPortfolio_preview,
     modal_images: designerPortfolio_slides,
     description: {
@@ -62,8 +63,8 @@ const works = [
     name: 'Custom Calculator',
     category: 'App',
     date: '2022-11-23',
-    website_link: './portfolio/app/calculator/index.html',
-    file_link: 'https://github.com/ZagSerSan/ZagSerSan.github.io/tree/master/portfolio/lending/calculator/',
+    website_link: 'https://zagsersan.github.io/portfolio_project-files/app/calculator/index.html',
+    file_link: 'https://github.com/ZagSerSan/portfolio_project-files/tree/main/app/calculator',
     img_src: calculator_preview,
     modal_images: calculator_slide,
     description: {
@@ -77,8 +78,8 @@ const works = [
     name: 'Todo list',
     category: 'App',
     date: '2022-11-23',
-    website_link: './portfolio/app/todoList/index.html',
-    file_link: 'https://github.com/ZagSerSan/ZagSerSan.github.io/tree/master/portfolio/app/todoList/',
+    website_link: 'https://zagsersan.github.io/portfolio_project-files/app/todoList/index.html',
+    file_link: 'https://github.com/ZagSerSan/portfolio_project-files/tree/main/app/todoList',
     img_src: todoList_preview,
     modal_images: todoList_slide,
     description: {
@@ -92,8 +93,8 @@ const works = [
     name: 'Contects Menu',
     category: 'App',
     date: '2022-11-23',
-    website_link: './portfolio/app/contectsMenu/index.html',
-    file_link: 'https://github.com/ZagSerSan/ZagSerSan.github.io/tree/master/portfolio/app/contectsMenu/',
+    website_link: 'https://zagsersan.github.io/portfolio_project-files/app/contectsMenu/index.html',
+    file_link: 'https://github.com/ZagSerSan/portfolio_project-files/tree/main/app/contectsMenu',
     img_src: contectsMenu_preview,
     modal_images: contectsMenu_slide,
     description: {
@@ -107,7 +108,8 @@ const works = [
     name: 'Weather Widget',
     category: 'App',
     date: '2022-11-23',
-    file_link: 'https://github.com/ZagSerSan/ZagSerSan.github.io/tree/master/portfolio/app/weather-widget/',
+    website_link: 'https://zagsersan.github.io/portfolio_project-files/app/weather-widget/dist/index.html',
+    file_link: 'https://github.com/ZagSerSan/portfolio_project-files/tree/main/app/weather-widget',
     img_src: weatherWidget_preview,
     modal_images: weatherWidget_slide,
     description: {
@@ -121,7 +123,8 @@ const works = [
     name: 'Tic-Tac-Toe',
     category: 'App',
     date: '2022-11-23',
-    file_link: 'https://github.com/ZagSerSan/ZagSerSan.github.io/tree/master/portfolio/app/tic-tac-toe/',
+    website_link: 'https://zagsersan.github.io/portfolio_project-files/app/tic-tac-toe/dist/index.html',
+    file_link: 'https://github.com/ZagSerSan/portfolio_project-files/tree/main/app/tic-tac-toe',
     img_src: ticTacToe_preview,
     modal_images: ticTacToe_slide,
     description: {
@@ -132,6 +135,21 @@ const works = [
   },
   {
     id: 9,
+    name: 'Our team',
+    category: 'App',
+    date: '2023-08-27',
+    website_link: 'https://zagsersan.github.io/portfolio_project-files/app/user-cards/build/index.html',
+    file_link: 'https://github.com/ZagSerSan/portfolio_project-files/tree/main/app/user-cards',
+    img_src: userCards_preview,
+    modal_images: userCards_slide,
+    description: {
+      en: 'I improved his skills independently developed a small project proposed during the course.',
+      ru: 'Я повышал свои навыки самостоятельно разрабатывал небольшой проект, предложенный на курсе..',
+      pl: 'pl version is none now..'
+    }
+  },
+  {
+    id: 10,
     name: 'Social Users Table',
     category: 'App',
     date: '2022-11-23',
