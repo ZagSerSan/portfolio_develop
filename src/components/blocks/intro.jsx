@@ -9,7 +9,7 @@ const social = [
   {iconId: 'facebook', subClass: 'facebook', href: 'https://www.facebook.com/profile.php?id=100036791829059'},
   {iconId: 'instagram', subClass: 'instagram', href: 'https://www.instagram.com/zagsersan/'},
   {iconId: 'github', subClass: 'github', href: 'https://github.com/ZagSerSan'},
-  {iconId: 'linkedin', subClass: 'linkedin', href: 'https://www.linkedin.com/in/zagsersan/'},
+  {iconId: 'linkedin', subClass: 'linkedin', href: 'https://www.linkedin.com/in/zagsersan/'}
 ]
 
 const Intro = () => {
