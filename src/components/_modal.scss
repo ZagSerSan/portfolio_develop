@@ -13,18 +13,49 @@
   justify-content: center;
   align-items: center;
 
-  background-color: transparent;
-  // opacity: 0;
-  transition:
-    background-color 0.3s linear,
-    opacity 0.3s linear;
+  // background-color: red;
+  opacity: 0;
+  // transition:
+  //   background-color 2s linear,
+  //   opacity 2s linear;
+
   &.display {
     display: flex;
   }
   &.bg {
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: background-color 0.3s linear;
-    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    // background-color: rgba(0, 0, 0, 0);
+    // transition: background-color 0.3s linear;
+    // opacity: 1;
+    animation: showModalBg 0.15s linear forwards;
+    animation-duration: 0.1;
+    @keyframes showModalBg {
+      from {
+        opacity: 0;
+
+        // background-color: rgba(0, 0, 0, 0);
+        // opacity: 0.5;
+        // transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+
+        // opacity: 1;
+        // transform: scale(1);
+      }
+    }
+  }
+  &.close {
+    animation: hideModalBg 0.15s linear forwards;
+    @keyframes hideModalBg {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
   }
 }
 .modal-work {
@@ -38,11 +69,36 @@
 
   text-align: left;
   background-color: #fff;
-  // opacity: 0;
-  // transform: scale(0);
+  opacity: 1;
+  transform: scale(1);
   transition:
     transform 0.3s linear,
     opacity 0.3s linear;
+
+  animation: openWindow 0.15s linear forwards;
+  @keyframes openWindow {
+    from {
+      opacity: 0.5;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  &.animation-close {
+    animation: closeWindow 0.15s linear forwards;
+    @keyframes closeWindow {
+      from {
+        opacity: 1;
+        transform: scale(1);
+      }
+      to {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+    }
+  }
   &.display {
     display: flex;
   }
@@ -129,6 +185,10 @@
   }
   &__used-stack {
     margin-bottom: 15px;
+    display: flex;
+    div {
+      cursor: help;
+    }
     svg {
       height: 30px;
       width: 30px;
@@ -171,8 +231,10 @@
       font-style: italic;
     }
     a {
-      margin-right: 10px;
       text-decoration: underline;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
       &:hover {
         text-decoration: none;
       }

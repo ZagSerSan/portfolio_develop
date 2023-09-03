@@ -2,10 +2,12 @@ import IconSVG from './iconSVG'
 import ModalSlider from './modalSlider'
 
 const Modal = ({ workItem, handleShow }) => {
-  const { name, category, date, modal_images, description, website_link, file_link } = workItem
+  const { name, category, date, modal_images, description, website_link, file_link, used_stack } = workItem
+  const lang = 'en' // польский язык
 
   document.addEventListener('keydown', (event) => {
     let key = event.key
+
     if (key === 'Escape') {
       handleShow()
       key = ''
@@ -39,19 +41,11 @@ const Modal = ({ workItem, handleShow }) => {
             CATEGORY: {category} <span>|</span> {date}
           </h4>
           <div className="modal-work__used-stack">
-            <svg>
-              <use href="#html"></use>
-            </svg>
-            <svg className="scss">
-              <use href="#scss"></use>
-            </svg>
-            <svg className="jquery">
-              <use href="#jquery"></use>
-            </svg>
-            {/* <a href="https://github.com/ZagSerSan/ZagSerSan.github.io/tree/master/portfolio/1-activebox">
-                  <svg><use href="#folder"></use></svg>
-                </a> */}
-            {/* <svg className="react"><use href="#react"></use></svg> */}
+            {used_stack && used_stack.map(icon => (
+              <div key={icon} title={icon}>
+                <IconSVG iconName={icon}/>
+              </div>
+            ))}
           </div>
           <div className="modal-work__client">
             {website_link && (
@@ -70,16 +64,8 @@ const Modal = ({ workItem, handleShow }) => {
             
           </div>
           <div className="modal-work__textbox">
-            <p className="modal-work__text">{description.en}</p>
+            <p className="modal-work__text">{description[lang]}</p>
           </div>
-          {/* <div className="modal-work__btnbox">
-                <div className="modal-work__btnbox-prev">
-                  <button className="modal-work__btn" id="btn_prev" data-openmodal="modal_1" data-prev="modal_4">previous</button>
-                </div>
-                <div className="modal-work__btnbox-next">
-                  <button className="modal-work__btn" id="btn_next" data-openmodal="modal_1" data-next="modal_2">next</button>
-                </div>
-            </div> */}
         </div>
       </div>
     </div>

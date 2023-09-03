@@ -546,6 +546,36 @@ a:hover {
   transition: bottom 0.1s linear, right 0.1s linear, box-shadow 0.1s linear, width 0.3s linear, max-height 0.3s linear, font-size 0.3s linear;
   transition: bottom 0.1s linear, right 0.1s linear, box-shadow 0.1s linear, width 0.3s linear, max-height 0.3s linear, font-size 0.3s linear, -webkit-box-shadow 0.1s linear;
   margin: 0 15px 30px;
+  border: 2px #ccc solid;
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation: showPortfolioItem 0.3s linear forwards;
+          animation: showPortfolioItem 0.3s linear forwards;
+}
+@-webkit-keyframes showPortfolioItem {
+  from {
+    opacity: 0.5;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes showPortfolioItem {
+  from {
+    opacity: 0.5;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 .portfolio-item:hover {
   bottom: 5px;
@@ -642,6 +672,9 @@ a:hover {
 
 .about-btns__item {
   padding: 15px 50px;
+}
+.about-btns__item:hover {
+  text-decoration: none;
 }
 .about-btns__item:not(:last-child) {
   margin-right: 15px;
@@ -743,9 +776,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: transparent;
-  -webkit-transition: background-color 0.3s linear, opacity 0.3s linear;
-  transition: background-color 0.3s linear, opacity 0.3s linear;
+  opacity: 0;
 }
 .modal-bg--work.display {
   display: -webkit-box;
@@ -753,10 +784,47 @@ a:hover {
   display: flex;
 }
 .modal-bg--work.bg {
-  background-color: rgba(0, 0, 0, 0.7);
-  -webkit-transition: background-color 0.3s linear;
-  transition: background-color 0.3s linear;
-  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-animation: showModalBg 0.15s linear forwards;
+          animation: showModalBg 0.15s linear forwards;
+  -webkit-animation-duration: 0.1;
+          animation-duration: 0.1;
+}
+@-webkit-keyframes showModalBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes showModalBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal-bg--work.close {
+  -webkit-animation: hideModalBg 0.15s linear forwards;
+          animation: hideModalBg 0.15s linear forwards;
+}
+@-webkit-keyframes hideModalBg {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hideModalBg {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .modal-work {
@@ -771,10 +839,67 @@ a:hover {
       flex-wrap: wrap;
   text-align: left;
   background-color: #fff;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: opacity 0.3s linear, -webkit-transform 0.3s linear;
   transition: opacity 0.3s linear, -webkit-transform 0.3s linear;
   transition: transform 0.3s linear, opacity 0.3s linear;
   transition: transform 0.3s linear, opacity 0.3s linear, -webkit-transform 0.3s linear;
+  -webkit-animation: openWindow 0.15s linear forwards;
+          animation: openWindow 0.15s linear forwards;
+}
+@-webkit-keyframes openWindow {
+  from {
+    opacity: 0.5;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes openWindow {
+  from {
+    opacity: 0.5;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.modal-work.animation-close {
+  -webkit-animation: closeWindow 0.15s linear forwards;
+          animation: closeWindow 0.15s linear forwards;
+}
+@-webkit-keyframes closeWindow {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+@keyframes closeWindow {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
 }
 .modal-work.display {
   display: -webkit-box;
@@ -868,6 +993,12 @@ a:hover {
 }
 .modal-work__used-stack {
   margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal-work__used-stack div {
+  cursor: help;
 }
 .modal-work__used-stack svg {
   height: 30px;
@@ -916,8 +1047,10 @@ a:hover {
   font-style: italic;
 }
 .modal-work__client a {
-  margin-right: 10px;
   text-decoration: underline;
+}
+.modal-work__client a:not(:last-child) {
+  margin-right: 20px;
 }
 .modal-work__client a:hover {
   text-decoration: none;
@@ -1051,9 +1184,9 @@ a:hover {
   position: absolute;
   bottom: 0px;
   left: 0;
-  padding: 10px 0 20px;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, white), color-stop(60%, rgba(255, 255, 255, 0.5)), color-stop(90%, transparent));
-  background: linear-gradient(0deg, white 20%, rgba(255, 255, 255, 0.5) 60%, transparent 90%);
+  padding: 20px 0 20px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(5%, white), color-stop(90%, transparent));
+  background: linear-gradient(0deg, white 5%, transparent 90%);
 }
 .slick-dots li {
   width: 12px;

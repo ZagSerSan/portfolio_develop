@@ -5,8 +5,15 @@ const WorkItem = ({ workItem }) => {
   const [show, setShow] = useState(false)
   const handleShow = () => {
     if (show) {
-      setShow(false)
-      document.body.style.removeProperty('overflow')
+      document.querySelector('.modal-work').classList.add('animation-close')
+      document.querySelector('.modal-bg--work').classList.add('close')
+
+      setTimeout(() => {
+        setShow(false)
+        document.body.style.removeProperty('overflow')
+        document.querySelector('.modal-work').classList.remove('animation-close')
+        document.querySelector('.modal-bg--work').classList.remove('close')
+      }, 150)
     } else {
       setShow(true)
       document.body.style = 'overflow: hidden;'

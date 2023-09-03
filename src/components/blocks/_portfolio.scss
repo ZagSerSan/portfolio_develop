@@ -61,6 +61,7 @@
   bottom: 0;
   right: 0;
   width: 30%;
+  // height: 0;
   max-height: 435px;
   box-shadow: 0px 0px 5px;
   border-radius: 10px;
@@ -74,6 +75,26 @@
     max-height 0.3s linear,
     font-size 0.3s linear;
   margin: 0 15px 30px;
+  border: 2px #ccc solid;
+
+  opacity: 0;
+  transform: scale(1);
+  animation: showPortfolioItem 0.3s linear forwards;
+  @keyframes showPortfolioItem {
+    from {
+      // height: 0;
+      opacity: 0.5;
+      transform: scale(0.9);
+      // width: 10%;
+    }
+    to {
+      // height: 435px;
+      opacity: 1;
+      transform: scale(1);
+      // width: 30%;
+    }
+  }
+
   &:hover {
     bottom: 5px;
     right: 5px;
