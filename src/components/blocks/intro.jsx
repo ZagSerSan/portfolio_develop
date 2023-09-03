@@ -1,5 +1,6 @@
 import IconSVG from "../iconSVG"
-import my_photo from '../../img/intro/photo.png'
+// import my_photo from '../../img/intro/photo.png'
+import my_photo from '../../img/intro/photo.webp'
 
 const Intro = () => {
   return (

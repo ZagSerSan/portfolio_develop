@@ -1,4 +1,5 @@
-import my_about_photo from '../../img/about/photo.png'
+// import my_about_photo from '../../img/about/photo.png'
+import my_about_photo from '../../img/about/photo.webp'
 
 const About = () => {
   return (
