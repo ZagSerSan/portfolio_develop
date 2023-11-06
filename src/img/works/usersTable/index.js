@@ -1,4 +1,5 @@
-import preview from './preview.gif'
+// import preview from './preview.gif'
+import preview from './slide_1.png'
 import slide_1 from './slide_1.png'
 import slide_2 from './slide_2.jpg'
 import slide_3 from './slide_3.png'

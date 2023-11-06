@@ -12,13 +12,28 @@ import { contectsMenu_preview, contectsMenu_slide } from '../../img/works/contec
 import { userCards_preview, userCards_slide } from '../../img/works/user-cards'
 import { zadanieRekrutacyjne_preview, zadanieRekrutacyjne_slides } from '../../img/works/zadanie-rekrutacyjne'
 import { usersTable_preview, usersTable_slides } from '../../img/works/usersTable'
+import { sapach_preview, sapach_slides } from '../../img/works/sapach'
 
 const works = [
+  {
+    id: 12,
+    name: 'Sapach Shop',
+    category: 'App',
+    date: '2023-11-06',
+    file_link: 'https://github.com/ZagSerSan/dp_online-store.git',
+    img_src: sapach_preview,
+    modal_images: sapach_slides,
+    description: {
+      en: 'The thesis of the course. It was made on the basis of all the theoretical knowledge and practical skills obtained. I helped to consolidate the material I passed and improve my skills.',
+      ru: 'Дипломная работа курса. Была сделана на основании всех полученных теоретических знаний и практических навыков. Помогла закрепить пройденный материал и улучшить свои навыки.',
+      pl: 'Praca dyplomowa kursu. Została wykonana w oparciu o całą zdobytą wiedzę teoretyczną i umiejętności praktyczne. Pomogła utrwalić przekazany materiał i poprawić swoje umiejętności.'
+    }
+  },
   {
     id: 11,
     name: 'Social Users Table',
     category: 'App',
-    date: 'now',
+    date: '2023-10-28',
     file_link: 'https://github.com/ZagSerSan/ZagSerSan.github.io/tree/master/portfolio/app/usersTable/',
     img_src: usersTable_preview,
     modal_images: usersTable_slides,
